@@ -1,15 +1,28 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce Ball Game</title>
     <link rel="stylesheet" href="styles.css">
-
-    <title>Bounce Ball Game using JavaScript</title>
 </head>
-
 <body>
-    <canvas id="mycanvas" width="650" height="450"></canvas>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="popup" class="hidden">
+            <h2>Select Difficulty</h2>
+            <button onclick="setDifficulty('easy')">Easy</button>
+            <button onclick="setDifficulty('medium')">Medium</button>
+            <button onclick="setDifficulty('hard')">Hard</button>
+        </div>
+        <div id="pause-menu" class="hidden">
+            <h2>Paused</h2>
+            <button onclick="resumeGame()">Resume</button>
+            <button onclick="restartGame()">Restart</button>
+            <button onclick="changeDifficulty()">Change Difficulty</button>
+        </div>
+        <button id="pause-btn" class="hidden" onclick="togglePause()">Pause</button>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
